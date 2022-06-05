@@ -1,3 +1,14 @@
+/**
+ *
+ * @ 类型断言
+ * 1.类型断言的作用
+ * 类型断言是用于实现【覆盖编译器推断的类型】
+ * 也就是，我们比编译器更了解变量需要什么样的类型，编译器不应该继续报错
+ *
+ * 2.
+ *
+ *
+ */
 function getLen(val: string | number) {
 	// 当不确定传入值的类型时，使用联合类型
 	// 断言为string，两种方式：1.<类型>val 2.as方式
@@ -11,5 +22,11 @@ function getLen(val: string | number) {
 	}
 }
 // 调用函数getLen
-console.log(getLen('abcde'));// 字符串abcde的长度是5
-console.log(getLen(45));// 数字45的位数是2
+console.log(getLen('abcde')); // 字符串abcde的长度是5
+console.log(getLen(45)); // 数字45的位数是2
+
+interface IType {
+	a: string;
+	b: string;
+}
+const myObj = {} as IType;
